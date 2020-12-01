@@ -28,7 +28,29 @@
   color: #61dafb;
 }
 
-.site-card-wrapper { padding: 30px; background: #ececec; } [data-theme="dark"] .site-card-wrapper { background: #303030; }
+.navbar {
+  padding-left: 50px;
+  padding-right: 50px;
+  background: darkblue;
+  font-size: 30px;
+  color: white;
+  min-height: 100px;
+}
+
+.site-card-wrapper { padding: 30px; display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; } [data-theme="dark"] .site-card-wrapper { background: #303030; }
+
+.card-info{
+  display: inline-block;
+  width: 500px;
+  background: #ffffff;
+  color:#000000;
+  border-radius: 20px;
+  padding:50px 30px 30px;
+}
+
 
 @keyframes App-logo-spin {
   from {

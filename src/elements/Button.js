@@ -1,11 +1,13 @@
 import styled, {css} from 'styled-components';
 export default styled.button`
-    font-family: "roboto";
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 5px;
-    padding:7px 10px;
-    background:green;
+    font-size: 20px;
+    border: 2px solid;
+    height: auto;
+    width: auto;
+    border-color: white;
+    border-radius: 9px;
+    padding:0px 2px;
+    background:transparent;
     margin:20px 10px;
     ${(props) =>
         props.background &&

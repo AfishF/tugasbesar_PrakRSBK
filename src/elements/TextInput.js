@@ -1,16 +1,16 @@
 import styled, {css, ThemeProvider} from "styled-components";
 
 export default styled.input`
-    font-family: "roboto";
-    font-size:1.3rem;
+    font-size:1.0rem;
     border:2px solid;
     border-radius:5px;
     padding:7px 10px;
     background:white;
+    margin:10px 10px;
     ${(props) =>
-        props.border &&
+        props.borderColor &&
         css`
-        border-color:${(props) =>props.border}
+        border-color:${(props) =>props.borderColor}
         `}
     color:black;
 `;
