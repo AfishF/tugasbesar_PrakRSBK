@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Characters from './pages/Characters';
+// import Characters from './pages/Characters';
+import Komponen from "../src/pages/Komponen";
 import { Row, Col, Layout } from "antd";
 import 'antd/dist/antd.css';
 
@@ -12,7 +13,8 @@ function App() {
       <Header>
       </Header>
       <Content className="content">
-          <Characters />
+        <Komponen />
+        {/* <Characters /> */}
       </Content>
       <Footer style={{ textAlign: "center" }}>
         ©2020 Created by Kelompok 8

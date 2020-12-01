@@ -7,7 +7,7 @@ import Button from "../elements/Button";
 import TextInput from "../elements/TextInput";
 
 export default class Characters extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -25,8 +25,10 @@ export default class Characters extends Component {
         };
     }
 
-    
+
     componentDidMount() {
+        alert('Selamat Datang, Salam hangat dari Abbiyu dan Afishal, Semoga harimu menyenangkan :)')
+
         axios({
             method: "get",
             url: "https://www.breakingbadapi.com/api/characters/",
@@ -45,14 +47,14 @@ export default class Characters extends Component {
             });
     }
     render() {
-        const {searchField} = this.state
-        const filterCharacter = this.state.character.filter(character =>(
+        const { searchField } = this.state
+        const filterCharacter = this.state.character.filter(character => (
             character.name.toLowerCase().includes(searchField.toLowerCase())
         ))
         return (
             <div>
                 <center>
-                <TextInput placeholder="Search by name" type="text" border="red" onChange={(e) => this.setState({searchField:e.target.value})} />
+                    <TextInput placeholder="Search by name" type="text" border="red" onChange={(e) => this.setState({ searchField: e.target.value })} />
                     <h1>List of Breaking Bad Characters</h1>
                 </center>
                 {filterCharacter.map((results, index) => {
