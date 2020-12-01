@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import { Row, Col, Card, Avatar } from "antd";
 import axios from "axios";
-import { UserOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
-import Button from "../elements/Button";
 import TextInput from "../elements/TextInput";
 import CharactersCard from "../components/CharactersCard";
 
@@ -68,7 +65,7 @@ export default class Characters extends Component {
                             birthday={results.birthday}
                             status={results.status}
                             nickname={results.nickname}
-                            occupation={results.occupation}
+                            occupation={results.occupation.join(', ')}
                             portrayed={results.portrayed}
                             />
                             
