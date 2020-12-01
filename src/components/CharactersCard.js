@@ -3,11 +3,11 @@ import '../App.css'
 import { Row, Col, Avatar } from "antd";
 import { UserOutlined } from '@ant-design/icons';
 
-export default function CharactersCard(props) {
+const CharactersCard = (props) => {
     return (
             <div className="card-info">
                 <center>
-                    <Avatar src={props.img} size={128} icon={<UserOutlined />} />
+                    <Avatar src={props.img} size={200} icon={<UserOutlined />} />
                     <h2>{props.name}</h2>
                 </center>
                 <Row>
@@ -33,3 +33,5 @@ export default function CharactersCard(props) {
             </div>
     )
 }
+
+export default CharactersCard;

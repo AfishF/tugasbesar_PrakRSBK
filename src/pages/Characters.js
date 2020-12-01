@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 import 'antd/dist/antd.css';
 import TextInput from "../elements/TextInput";
 import CharactersCard from "../components/CharactersCard";
@@ -10,7 +11,6 @@ export default class Characters extends Component {
         super(props);
         this.state = {
             character: [],
-            visible: false,
             char_id: 0,
             name: "",
             bithday: "",
@@ -49,30 +49,34 @@ export default class Characters extends Component {
         const filterCharacter = this.state.character.filter(character => (
             character.name.toLowerCase().includes(searchField.toLowerCase())
         ))
+
         return (
             <div>
                 <TextInput placeholder="Search by name" type="text" bordeColor="black" onChange={(e) => this.setState({ searchField: e.target.value })} />
                 <center>
                     <h1>List of Breaking Bad Characters</h1>
                 </center>
-                {filterCharacter.map((results, index) => {
-                    return (
-                        <div className="site-card-wrapper" key={results.char_id}>
-                            
-                            <CharactersCard 
-                            img={results.img}
-                            name={results.name}
-                            birthday={results.birthday}
-                            status={results.status}
-                            nickname={results.nickname}
-                            occupation={results.occupation.join(', ')}
-                            portrayed={results.portrayed}
-                            />
-                            
-                        </div>
-                        
-                    );
-                })}
+                {
+                    (filterCharacter != 0)
+                        ? filterCharacter.map((results, index) => {
+                            return (
+                                <div className="site-card-wrapper" key={results.char_id}>
+                                    <CharactersCard
+                                        img={results.img}
+                                        name={results.name}
+                                        birthday={results.birthday}
+                                        status={results.status}
+                                        nickname={results.nickname}
+                                        occupation={results.occupation.join(', ')}
+                                        portrayed={results.portrayed}
+                                    />
+                                </div>
+                            );
+                        })
+                        : <center>
+                            <h1>No Data Found</h1>
+                        </center>
+                }
             </div>
         );
     }

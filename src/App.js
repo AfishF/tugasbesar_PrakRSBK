@@ -13,9 +13,9 @@ function App() {
   return (
     <Router>
       <Layout className="layout">
-        <Header className="navbar" style={{ color: "white" }}>
+        <Header className="navbar">
           <Row>
-            <Col span={8}><p style={{ margin: "15px" }}>Kelompok 8</p></Col>
+            <Col span={8}><p style={{ margin: "15px" }}>Breaking Bad</p></Col>
             <Col span={8} offset={8} style={{ textAlign: "right" }}>
               <Button background="transparent">
                 <Link style={{ color: "white" }} to="/">Characters</Link>
