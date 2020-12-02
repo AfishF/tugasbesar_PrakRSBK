@@ -4,6 +4,16 @@ import CharactersCard from "../components/CharactersCard";
 import { Row, Col } from "antd";
 
 export default class About extends Component {
+
+    componentDidMount() {
+        alert('I will go to the about page')
+    }
+
+    componentWillUnmount() {
+        alert('I will go to the character page')
+    }
+
+
     render() {
         return (
             <div>
